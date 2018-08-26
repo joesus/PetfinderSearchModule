@@ -1,0 +1,6 @@
+[submodule "Submodules/AnimalSearch"]
+	path = Submodules/AnimalSearch
+	url = git@github.com:joesus/AnimalSearchModule.git
+[submodule "Submodules/AnimalData"]
+	path = Submodules/AnimalData
+	url = git@github.com:joesus/AnimalDataModule.git
