@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F42EDB46213362920093842D /* PetfinderSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB3C213362920093842D /* PetfinderSearch.framework */; };
 		F42EDB4D213362920093842D /* PetfinderSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = F42EDB3F213362920093842D /* PetfinderSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F42EDB7821336C000093842D /* AnimalData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB6A21336BDC0093842D /* AnimalData.framework */; };
+		F42EDB7921336C000093842D /* AnimalSearchModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB7421336BF20093842D /* AnimalSearchModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,6 +21,34 @@
 			remoteGlobalIDString = F42EDB3B213362920093842D;
 			remoteInfo = PetfinderSearch;
 		};
+		F42EDB6921336BDC0093842D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F42EDACF213350ED0093842D;
+			remoteInfo = AnimalData;
+		};
+		F42EDB6B21336BDC0093842D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F42EDAD8213350ED0093842D;
+			remoteInfo = AnimalDataTests;
+		};
+		F42EDB7321336BF20093842D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F42EDAFE213357BA0093842D;
+			remoteInfo = AnimalSearchModule;
+		};
+		F42EDB7521336BF20093842D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F42EDB07213357BA0093842D;
+			remoteInfo = AnimalSearchModuleTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +57,8 @@
 		F42EDB40213362920093842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42EDB45213362920093842D /* PetfinderSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetfinderSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42EDB4C213362920093842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimalData.xcodeproj; path = ../Submodules/AnimalData/AnimalData/AnimalData.xcodeproj; sourceTree = "<group>"; };
+		F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimalSearchModule.xcodeproj; path = ../Submodules/AnimalSearch/AnimalSearchModule/AnimalSearchModule.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42EDB7821336C000093842D /* AnimalData.framework in Frameworks */,
+				F42EDB7921336C000093842D /* AnimalSearchModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +85,12 @@
 		F42EDB32213362920093842D = {
 			isa = PBXGroup;
 			children = (
+				F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */,
+				F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */,
 				F42EDB3E213362920093842D /* PetfinderSearch */,
 				F42EDB49213362920093842D /* PetfinderSearchTests */,
 				F42EDB3D213362920093842D /* Products */,
+				F42EDB7721336C000093842D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +118,31 @@
 				F42EDB4C213362920093842D /* Info.plist */,
 			);
 			path = PetfinderSearchTests;
+			sourceTree = "<group>";
+		};
+		F42EDB6521336BDC0093842D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F42EDB6A21336BDC0093842D /* AnimalData.framework */,
+				F42EDB6C21336BDC0093842D /* AnimalDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42EDB6E21336BF10093842D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F42EDB7421336BF20093842D /* AnimalSearchModule.framework */,
+				F42EDB7621336BF20093842D /* AnimalSearchModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F42EDB7721336C000093842D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +225,16 @@
 			mainGroup = F42EDB32213362920093842D;
 			productRefGroup = F42EDB3D213362920093842D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F42EDB6521336BDC0093842D /* Products */;
+					ProjectRef = F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */;
+				},
+				{
+					ProductGroup = F42EDB6E21336BF10093842D /* Products */;
+					ProjectRef = F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F42EDB3B213362920093842D /* PetfinderSearch */,
@@ -170,6 +242,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F42EDB6A21336BDC0093842D /* AnimalData.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AnimalData.framework;
+			remoteRef = F42EDB6921336BDC0093842D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F42EDB6C21336BDC0093842D /* AnimalDataTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AnimalDataTests.xctest;
+			remoteRef = F42EDB6B21336BDC0093842D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F42EDB7421336BF20093842D /* AnimalSearchModule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AnimalSearchModule.framework;
+			remoteRef = F42EDB7321336BF20093842D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F42EDB7621336BF20093842D /* AnimalSearchModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AnimalSearchModuleTests.xctest;
+			remoteRef = F42EDB7521336BF20093842D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F42EDB3A213362920093842D /* Resources */ = {
