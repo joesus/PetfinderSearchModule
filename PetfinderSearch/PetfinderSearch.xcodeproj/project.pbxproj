@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F42EDB46213362920093842D /* PetfinderSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB3C213362920093842D /* PetfinderSearch.framework */; };
-		F42EDB4B213362920093842D /* PetfinderSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDB4A213362920093842D /* PetfinderSearchTests.swift */; };
 		F42EDB4D213362920093842D /* PetfinderSearch.h in Headers */ = {isa = PBXBuildFile; fileRef = F42EDB3F213362920093842D /* PetfinderSearch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		F42EDB3F213362920093842D /* PetfinderSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetfinderSearch.h; sourceTree = "<group>"; };
 		F42EDB40213362920093842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F42EDB45213362920093842D /* PetfinderSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetfinderSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F42EDB4A213362920093842D /* PetfinderSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetfinderSearchTests.swift; sourceTree = "<group>"; };
 		F42EDB4C213362920093842D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 		F42EDB49213362920093842D /* PetfinderSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				F42EDB4A213362920093842D /* PetfinderSearchTests.swift */,
 				F42EDB4C213362920093842D /* Info.plist */,
 			);
 			path = PetfinderSearchTests;
@@ -201,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F42EDB4B213362920093842D /* PetfinderSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
