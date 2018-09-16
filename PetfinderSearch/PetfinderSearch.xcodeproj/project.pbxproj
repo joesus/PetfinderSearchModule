@@ -13,6 +13,8 @@
 		F42EDB7821336C000093842D /* AnimalData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB6A21336BDC0093842D /* AnimalData.framework */; };
 		F42EDB7921336C000093842D /* AnimalSearchModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42EDB7421336BF20093842D /* AnimalSearchModule.framework */; };
 		F42EDB7C21336DCF0093842D /* SampleSearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDB7B21336DCF0093842D /* SampleSearchParameters.swift */; };
+		F4BB6C98214EE94C00C16267 /* SearchParameterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDB56213364A40093842D /* SearchParameterTests.swift */; };
+		F4BB6C9E214EE9CF00C16267 /* SearchQueryItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */; };
 		F4E57B4D2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */; };
 		F4E57B4F2145C7C000B4D5B3 /* SearchServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E57B4E2145C7C000B4D5B3 /* SearchServiceFactory.swift */; };
 		F4E57B512145CB6B00B4D5B3 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E57B502145CB6B00B4D5B3 /* SearchService.swift */; };
@@ -67,6 +69,7 @@
 		F42EDB6421336BDC0093842D /* AnimalData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimalData.xcodeproj; path = ../Submodules/AnimalData/AnimalData/AnimalData.xcodeproj; sourceTree = "<group>"; };
 		F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimalSearchModule.xcodeproj; path = ../Submodules/AnimalSearch/AnimalSearchModule/AnimalSearchModule.xcodeproj; sourceTree = "<group>"; };
 		F42EDB7B21336DCF0093842D /* SampleSearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSearchParameters.swift; sourceTree = "<group>"; };
+		F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQueryItemBuilder.swift; sourceTree = "<group>"; };
 		F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceFactoryTests.swift; sourceTree = "<group>"; };
 		F4E57B4E2145C7C000B4D5B3 /* SearchServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceFactory.swift; sourceTree = "<group>"; };
 		F4E57B502145CB6B00B4D5B3 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -120,8 +123,9 @@
 				F42EDB40213362920093842D /* Info.plist */,
 				F42EDB3F213362920093842D /* PetfinderSearch.h */,
 				F42EDB6221336B760093842D /* SearchParameters.swift */,
-				F4E57B4E2145C7C000B4D5B3 /* SearchServiceFactory.swift */,
+				F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */,
 				F4E57B502145CB6B00B4D5B3 /* SearchService.swift */,
+				F4E57B4E2145C7C000B4D5B3 /* SearchServiceFactory.swift */,
 			);
 			path = PetfinderSearch;
 			sourceTree = "<group>";
@@ -322,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4E57B512145CB6B00B4D5B3 /* SearchService.swift in Sources */,
+				F4BB6C9E214EE9CF00C16267 /* SearchQueryItemBuilder.swift in Sources */,
 				F4E57B4F2145C7C000B4D5B3 /* SearchServiceFactory.swift in Sources */,
 				F42EDB6321336B760093842D /* SearchParameters.swift in Sources */,
 			);
@@ -331,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BB6C98214EE94C00C16267 /* SearchParameterTests.swift in Sources */,
 				F4E57B4D2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift in Sources */,
 				F42EDB7C21336DCF0093842D /* SampleSearchParameters.swift in Sources */,
 			);

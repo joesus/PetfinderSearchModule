@@ -10,27 +10,86 @@
 import XCTest
 
 class SearchParameterTests: XCTestCase {
-    
+
     func testSearchParameterKeys() {
-        XCTAssertEqual(SearchParameters.QueryItemKeys.location, "location",
+        XCTAssertEqual(SearchQueryItemKeys.location, "location",
                        "There should be a defined name for each key")
-        XCTAssertEqual(SearchParameters.QueryItemKeys.species, "animal",
+        XCTAssertEqual(SearchQueryItemKeys.species, "animal",
                        "There should be a defined name for each key")
     }
 
-    func testParametersIncludeZipCode() {
-        XCTAssertEqual(
-            SampleSearchParameters.minimalSearchOptions.zipCode,
-            SampleSearchParameters.zipCode,
-            "Parameters include a zip code"
+    func testCreatingQueryItemsWithoutSpecies() {
+        let queryItems = SearchQueryItemBuilder.build(
+            from: SampleSearchParameters.zipCodeOnly
         )
 
-        XCTAssertEqual(
-            SampleSearchParameters.minimalSearchOptions.queryItems,
-            [SampleSearchParameters.zipCodeQueryItem],
-            "Parameters should provide query items"
-        )
+        XCTAssertEqual(queryItems.count, 1,
+                       "Should create correct number of query items")
+
+        guard let locationItem = queryItems
+            .first(where: { $0.name == SearchQueryItemKeys.location })
+            else {
+                return XCTFail("Query items should include an entry for location")
+        }
+
+        XCTAssertEqual(locationItem.value, SampleSearchParameters.zipCode.rawValue,
+                       "Should create location query item with the correct value")
     }
+
+    func testCreatingQueryItemsWithDog() {
+        let queryItems = SearchQueryItemBuilder.build(
+            from: SampleSearchParameters.usingDog
+        )
+
+        XCTAssertEqual(queryItems.count, 2,
+                       "Should create correct number of query items")
+
+        guard let locationItem = queryItems
+            .first(where: { $0.name == SearchQueryItemKeys.location })
+            else {
+                return XCTFail("Query items should include an entry for location")
+        }
+
+        XCTAssertEqual(locationItem.value, SampleSearchParameters.zipCode.rawValue,
+                       "Should create location query item with the correct value")
+
+        guard let speciesItem = queryItems
+            .first(where: { $0.name == SearchQueryItemKeys.species })
+            else {
+                return XCTFail("Query items should include an entry for species")
+        }
+
+        XCTAssertEqual(speciesItem.value, "dog",
+                       "Should create species query item with the correct value")
+    }
+
+    func testCreatingQueryItemsWithCat() {
+        let queryItems = SearchQueryItemBuilder.build(
+            from: SampleSearchParameters.usingCat
+        )
+
+        XCTAssertEqual(queryItems.count, 2,
+                       "Should create correct number of query items")
+
+        guard let locationItem = queryItems
+            .first(where: { $0.name == SearchQueryItemKeys.location })
+            else {
+                return XCTFail("Query items should include an entry for location")
+        }
+
+        XCTAssertEqual(locationItem.value, SampleSearchParameters.zipCode.rawValue,
+                       "Should create location query item with the correct value")
+
+        guard let speciesItem = queryItems
+            .first(where: { $0.name == SearchQueryItemKeys.species })
+            else {
+                return XCTFail("Query items should include an entry for species")
+        }
+
+        XCTAssertEqual(speciesItem.value, "cat",
+                       "Should create species query item with the correct value")
+    }
+
 //
 //    func testParametersDoNotRequireSpecies() {
 //        XCTAssertNil(SampleSearchParameters.minimalSearchOptions.species,

@@ -12,8 +12,15 @@ import AnimalSearchModule
 enum SampleSearchParameters {
     static let zipCode = ZipCode(rawValue: "80202")!
 
-    static let minimalSearchOptions = SearchParameters(
+    static let zipCodeOnly = SearchParameters(zipCode: zipCode)
+
+    static let usingDog = SearchParameters(
         zipCode: zipCode,
         species: .dog
+    )
+
+    static let usingCat = SearchParameters(
+        zipCode: zipCode,
+        species: .cat
     )
 }

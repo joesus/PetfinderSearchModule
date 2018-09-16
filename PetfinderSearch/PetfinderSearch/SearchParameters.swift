@@ -6,13 +6,7 @@
 //  Copyright © 2018 Joe Susnick. All rights reserved.
 //
 
-import AnimalData
-import AnimalSearchModule
-import CoreLocation
-
-extension SearchParameters {
-    enum QueryItemKeys {
-        static let location = "location"
-        static let species = "animal"
-    }
+enum SearchQueryItemKeys {
+    static let location = "location"
+    static let species = "animal"
 }

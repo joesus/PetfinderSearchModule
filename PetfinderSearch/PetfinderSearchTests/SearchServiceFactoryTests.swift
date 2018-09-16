@@ -14,7 +14,7 @@ class SearchServiceFactoryTests: XCTestCase {
 
     func testFactoryProvidesSearchService() {
         let abstractService = PetfinderSearch.SearchServiceFactory().createService(
-            parameters: SampleSearchParameters.minimalSearchOptions,
+            parameters: SampleSearchParameters.usingDog,
             pageSize: 1
         )
 
@@ -30,7 +30,7 @@ class SearchServiceFactoryTests: XCTestCase {
 
         XCTAssertEqual(
             concreteService.parameters,
-            SampleSearchParameters.minimalSearchOptions,
+            SampleSearchParameters.usingDog,
             "Factory should provide service with correct search parameters"
         )
     }
