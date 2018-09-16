@@ -15,6 +15,8 @@
 		F42EDB7C21336DCF0093842D /* SampleSearchParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDB7B21336DCF0093842D /* SampleSearchParameters.swift */; };
 		F4BB6C98214EE94C00C16267 /* SearchParameterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDB56213364A40093842D /* SearchParameterTests.swift */; };
 		F4BB6C9E214EE9CF00C16267 /* SearchQueryItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */; };
+		F4BB6CA0214EF09300C16267 /* PetFinderUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6C9F214EF09300C16267 /* PetFinderUrlBuilder.swift */; };
+		F4BB6CA2214EF0C000C16267 /* PetfinderUrlBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6CA1214EF0C000C16267 /* PetfinderUrlBuilderTests.swift */; };
 		F4BB6CA4214EF2E400C16267 /* RecordLengthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6CA3214EF2E400C16267 /* RecordLengthTests.swift */; };
 		F4BB6CA6214EF35A00C16267 /* RecordLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6CA5214EF35A00C16267 /* RecordLength.swift */; };
 		F4E57B4D2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */; };
@@ -72,6 +74,8 @@
 		F42EDB6D21336BF10093842D /* AnimalSearchModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimalSearchModule.xcodeproj; path = ../Submodules/AnimalSearch/AnimalSearchModule/AnimalSearchModule.xcodeproj; sourceTree = "<group>"; };
 		F42EDB7B21336DCF0093842D /* SampleSearchParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSearchParameters.swift; sourceTree = "<group>"; };
 		F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQueryItemBuilder.swift; sourceTree = "<group>"; };
+		F4BB6C9F214EF09300C16267 /* PetFinderUrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetFinderUrlBuilder.swift; sourceTree = "<group>"; };
+		F4BB6CA1214EF0C000C16267 /* PetfinderUrlBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetfinderUrlBuilderTests.swift; sourceTree = "<group>"; };
 		F4BB6CA3214EF2E400C16267 /* RecordLengthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordLengthTests.swift; sourceTree = "<group>"; };
 		F4BB6CA5214EF35A00C16267 /* RecordLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordLength.swift; sourceTree = "<group>"; };
 		F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceFactoryTests.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			children = (
 				F42EDB40213362920093842D /* Info.plist */,
 				F42EDB3F213362920093842D /* PetfinderSearch.h */,
+				F4BB6C9F214EF09300C16267 /* PetFinderUrlBuilder.swift */,
 				F4BB6CA5214EF35A00C16267 /* RecordLength.swift */,
 				F42EDB6221336B760093842D /* SearchParameters.swift */,
 				F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */,
@@ -139,10 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				F42EDB4C213362920093842D /* Info.plist */,
-				F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */,
+				F4BB6CA1214EF0C000C16267 /* PetfinderUrlBuilderTests.swift */,
 				F4BB6CA3214EF2E400C16267 /* RecordLengthTests.swift */,
 				F42EDB7A21336DC20093842D /* SampleData */,
 				F42EDB56213364A40093842D /* SearchParameterTests.swift */,
+				F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */,
 			);
 			path = PetfinderSearchTests;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				F4E57B512145CB6B00B4D5B3 /* SearchService.swift in Sources */,
 				F4BB6C9E214EE9CF00C16267 /* SearchQueryItemBuilder.swift in Sources */,
 				F4E57B4F2145C7C000B4D5B3 /* SearchServiceFactory.swift in Sources */,
+				F4BB6CA0214EF09300C16267 /* PetFinderUrlBuilder.swift in Sources */,
 				F42EDB6321336B760093842D /* SearchParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +353,7 @@
 				F4BB6C98214EE94C00C16267 /* SearchParameterTests.swift in Sources */,
 				F4E57B4D2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift in Sources */,
 				F42EDB7C21336DCF0093842D /* SampleSearchParameters.swift in Sources */,
+				F4BB6CA2214EF0C000C16267 /* PetfinderUrlBuilderTests.swift in Sources */,
 				F4BB6CA4214EF2E400C16267 /* RecordLengthTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
