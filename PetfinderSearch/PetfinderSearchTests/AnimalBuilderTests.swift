@@ -11,7 +11,6 @@ import XCTest
 
 class AnimalBuilderTests: XCTestCase {
 
-    // Empty Data
     func testTransformingEmptyDataToAnimalList() {
         let response = SampleExternalAnimalData.wrap(
             animals: [SampleExternalAnimalData.empty]
@@ -20,7 +19,6 @@ class AnimalBuilderTests: XCTestCase {
         XCTAssertTrue(animals.isEmpty, "Empty data should produce empty list of animals")
     }
 
-    // Minimal Data
     func testBuildingAnimalsFromMinimalAnimalData() {
         let response = SampleExternalAnimalData.wrap(
             animals: [
@@ -44,4 +42,17 @@ class AnimalBuilderTests: XCTestCase {
         XCTAssertEqual(animalTwo.species, .cat, "Second animal species was set incorrectly")
     }
 
+    func testBuildingDog() {
+        let response = SampleExternalAnimalData.wrap(
+            animals: [SampleExternalAnimalData.Dog.valid]
+        )
+        let animals = AnimalBuilder.buildAnimals(from: response)
+
+        guard let dog = animals.first else {
+            return XCTFail("Should build a dog from a valid response")
+        }
+
+        XCTAssertEqual(dog.name, "DogOne", "Animal name was set incorrectly")
+        XCTAssertEqual(dog.species, .dog, "Animal species was set incorrectly")
+    }
 }
