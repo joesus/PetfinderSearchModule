@@ -11,12 +11,28 @@ import XCTest
 
 class AnimalBuilderTests: XCTestCase {
 
-    func testTransformingEmptyDataToAnimalList() {
-        let response = SampleExternalAnimalData.wrap(
-            animals: [SampleExternalAnimalData.empty]
-        )
-        let animals = AnimalBuilder.buildAnimals(from: response)
-        XCTAssertTrue(animals.isEmpty, "Empty data should produce empty list of animals")
+    func testMissingRoot() {
+        let animals = AnimalBuilder.buildAnimals(from: [String: Any]())
+
+        XCTAssertTrue(animals.isEmpty, "A response with an empty root should not produce a list of animals")
+    }
+
+    func testEmptyResponse() {
+        let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyResponse)
+
+        XCTAssertTrue(animals.isEmpty, "A empty response should not produce a list of animals")
+    }
+
+    func testMissingOuterList() {
+        let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyOuterList)
+
+        XCTAssertTrue(animals.isEmpty, "A response with an empty outer list should not produce a list of animals")
+    }
+
+    func testMissingInnerList() {
+        let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyInnerList)
+
+        XCTAssertTrue(animals.isEmpty, "A response with an empty inner list should not produce a list of animals")
     }
 
     func testBuildingAnimalsFromMinimalAnimalData() {

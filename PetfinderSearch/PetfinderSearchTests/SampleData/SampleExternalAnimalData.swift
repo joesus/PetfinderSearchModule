@@ -11,6 +11,20 @@
 
 enum SampleExternalAnimalData {
 
+    static let emptyResponse = ["petfinder": [String: Any]()]
+    static let emptyOuterList = [
+        "petfinder": [
+            "pets": [String: Any]()
+        ]
+    ]
+    static let emptyInnerList = [
+        "petfinder": [
+            "pets": [
+                "pet": []
+            ]
+        ]
+    ]
+
     static func wrap(animals: [[String: Any]]) -> [String: Any] {
         return [
             "petfinder": [
@@ -20,8 +34,6 @@ enum SampleExternalAnimalData {
             ]
         ]
     }
-
-    static let empty: [String: Any] = [:]
 
     enum Cat {
         static let valid: [String: Any] = [
