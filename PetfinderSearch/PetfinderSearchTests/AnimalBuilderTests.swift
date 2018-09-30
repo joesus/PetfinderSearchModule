@@ -14,25 +14,59 @@ class AnimalBuilderTests: XCTestCase {
     func testMissingRoot() {
         let animals = AnimalBuilder.buildAnimals(from: [String: Any]())
 
-        XCTAssertTrue(animals.isEmpty, "A response with an empty root should not produce a list of animals")
+        XCTAssertTrue(animals.isEmpty,
+                      "A response with an empty root should not produce a list of animals")
     }
 
     func testEmptyResponse() {
         let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyResponse)
 
-        XCTAssertTrue(animals.isEmpty, "A empty response should not produce a list of animals")
+        XCTAssertTrue(animals.isEmpty,
+                      "A empty response should not produce a list of animals")
     }
 
     func testMissingOuterList() {
         let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyOuterList)
 
-        XCTAssertTrue(animals.isEmpty, "A response with an empty outer list should not produce a list of animals")
+        XCTAssertTrue(animals.isEmpty,
+                      "A response with an empty outer list should not produce a list of animals")
     }
 
     func testMissingInnerList() {
         let animals = AnimalBuilder.buildAnimals(from: SampleExternalAnimalData.emptyInnerList)
 
-        XCTAssertTrue(animals.isEmpty, "A response with an empty inner list should not produce a list of animals")
+        XCTAssertTrue(animals.isEmpty,
+                      "A response with an empty inner list should not produce a list of animals")
+    }
+
+    func testMissingName() {
+        let response = SampleExternalAnimalData.wrap(
+            animals: [SampleExternalAnimalData.Cat.missingName]
+        )
+        let animals = AnimalBuilder.buildAnimals(from: response)
+
+        XCTAssertTrue(animals.isEmpty,
+                      "Should not create animals without names")
+    }
+
+    func testMissingSpecies() {
+        let response = SampleExternalAnimalData.wrap(
+            animals: [SampleExternalAnimalData.NonAnimal.missingSpecies]
+        )
+        let animals = AnimalBuilder.buildAnimals(from: response)
+
+        XCTAssertTrue(animals.isEmpty,
+                      "Should not create animals without species")
+    }
+
+    func testInvalidSpecies() {
+        let response = SampleExternalAnimalData.wrap(
+            animals: [SampleExternalAnimalData.NonAnimal.unknownSpecies]
+        )
+        let animals = AnimalBuilder.buildAnimals(from: response)
+
+        XCTAssertTrue(animals.isEmpty,
+                      "Should not create animals with unknown species")
     }
 
     func testBuildingAnimalsFromMinimalAnimalData() {
@@ -51,11 +85,15 @@ class AnimalBuilderTests: XCTestCase {
                 return XCTFail("There should be two valid animals")
         }
 
-        XCTAssertEqual(animalOne.name, "CatOne", "First animal name was set incorrectly")
-        XCTAssertEqual(animalOne.species, .cat, "First animal species was set incorrectly")
+        XCTAssertEqual(animalOne.name, "CatOne",
+                       "First animal name was set incorrectly")
+        XCTAssertEqual(animalOne.species, .cat,
+                       "First animal species was set incorrectly")
 
-        XCTAssertEqual(animalTwo.name, "CatTwo", "Second animal name was set incorrectly")
-        XCTAssertEqual(animalTwo.species, .cat, "Second animal species was set incorrectly")
+        XCTAssertEqual(animalTwo.name, "CatTwo",
+                       "Second animal name was set incorrectly")
+        XCTAssertEqual(animalTwo.species, .cat,
+                       "Second animal species was set incorrectly")
     }
 
     func testBuildingDog() {
@@ -68,7 +106,9 @@ class AnimalBuilderTests: XCTestCase {
             return XCTFail("Should build a dog from a valid response")
         }
 
-        XCTAssertEqual(dog.name, "DogOne", "Animal name was set incorrectly")
-        XCTAssertEqual(dog.species, .dog, "Animal species was set incorrectly")
+        XCTAssertEqual(dog.name, "DogOne",
+                       "Animal name was set incorrectly")
+        XCTAssertEqual(dog.species, .dog,
+                       "Animal species was set incorrectly")
     }
 }

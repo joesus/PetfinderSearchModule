@@ -70,4 +70,20 @@ enum SampleExternalAnimalData {
         ]
     }
 
+    enum NonAnimal {
+        static let missingSpecies: [String: Any] = [
+            "name": [
+                "$t": "NonAnimal"
+            ]
+        ]
+        static let unknownSpecies: [String: Any] = [
+            "name": [
+                "$t": "NonAnimal"
+            ],
+            "animal": [
+                "$t": "planet"
+            ]
+        ]
+    }
+
 }
