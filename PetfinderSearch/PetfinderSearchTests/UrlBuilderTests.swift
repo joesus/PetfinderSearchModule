@@ -44,7 +44,7 @@ class UrlBuilderTests: XCTestCase {
         let queryItems = validateBaseUrl(url)
 
         if let speciesItem = queryItems.first(where: { $0.name == "animal" }) {
-            XCTAssertEqual(speciesItem.value, "dog",
+            XCTAssertEqual(speciesItem.value, "Dog",
                            "Species should be passed correctly")
         }
         else {
@@ -72,7 +72,7 @@ class UrlBuilderTests: XCTestCase {
         let queryItems = validateBaseUrl(url)
 
         if let speciesItem = queryItems.first(where: { $0.name == "animal" }) {
-            XCTAssertEqual(speciesItem.value, "cat",
+            XCTAssertEqual(speciesItem.value, "Cat",
                            "Species should be passed correctly")
         }
         else {

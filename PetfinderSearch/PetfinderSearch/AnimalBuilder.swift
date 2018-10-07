@@ -55,8 +55,8 @@ enum AnimalBuilder {
         }
 
         switch rawSpecies {
-        case "cat": return .cat
-        case "dog": return .dog
+        case "Cat": return .cat
+        case "Dog": return .dog
         default: return nil
         }
     }

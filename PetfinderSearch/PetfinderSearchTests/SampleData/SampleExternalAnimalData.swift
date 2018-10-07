@@ -38,7 +38,7 @@ enum SampleExternalAnimalData {
     enum Cat {
         static let missingName: [String: Any] = [
             "animal": [
-                "$t": "cat"
+                "$t": "Cat"
             ]
         ]
 
@@ -48,7 +48,7 @@ enum SampleExternalAnimalData {
                     "$t": "Cat\(index)"
                 ],
                 "animal": [
-                    "$t": "cat"
+                    "$t": "Cat"
                 ]
             ]
         }
@@ -60,7 +60,7 @@ enum SampleExternalAnimalData {
                 "$t": "DogOne"
             ],
             "animal": [
-                "$t": "dog"
+                "$t": "Dog"
             ]
         ]
     }

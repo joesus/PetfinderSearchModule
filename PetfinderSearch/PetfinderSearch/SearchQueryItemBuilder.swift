@@ -56,8 +56,8 @@ enum SearchQueryItemBuilder {
     }
 
     private static let speciesValueMapping = [
-        Species.cat: "cat",
-        .dog: "dog"
+        Species.cat: "Cat",
+        .dog: "Dog"
     ]
 
     private static func speciesValue(from species: Species) -> String {
