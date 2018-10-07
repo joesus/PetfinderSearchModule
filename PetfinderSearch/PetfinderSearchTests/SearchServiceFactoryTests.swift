@@ -23,9 +23,9 @@ class SearchServiceFactoryTests: XCTestCase {
         }
 
         let expectedCursor = PaginationCursor(size: 1)
-        XCTAssertEqual(concreteService.paginationCursor, expectedCursor,
+        XCTAssertEqual(concreteService.nextPaginationCursor, expectedCursor,
                        "Factory should provide service with correctly configured cursor")
-        XCTAssertEqual(concreteService.paginationCursor.index, 0,
+        XCTAssertEqual(concreteService.nextPaginationCursor.index, 0,
                        "Factory should start on the first page")
 
         XCTAssertEqual(

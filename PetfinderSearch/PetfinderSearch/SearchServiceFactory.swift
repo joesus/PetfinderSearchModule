@@ -20,7 +20,7 @@ public class SearchServiceFactory: AnimalSearchModule.SearchServiceFactory {
 
         return PetfinderSearch.SearchService(
             parameters: parameters,
-            pageSize: 1
+            pageSize: pageSize
         )
     }
 
