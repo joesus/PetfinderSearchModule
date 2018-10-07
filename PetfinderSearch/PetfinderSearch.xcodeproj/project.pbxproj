@@ -17,7 +17,9 @@
 		F49B04AF216152D7000849B0 /* AnimalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04AE216152D7000849B0 /* AnimalBuilder.swift */; };
 		F49B04B121616240000849B0 /* CommunicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04B021616240000849B0 /* CommunicatorTests.swift */; };
 		F49B04BB2161806E000849B0 /* NetworkTestingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04BA2161806E000849B0 /* NetworkTestingConstants.swift */; };
+		F49B04BF2161897D000849B0 /* NetworkFakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04BE2161897D000849B0 /* NetworkFakes.swift */; };
 		F49B04C021618A7D000849B0 /* SearchCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04B221616301000849B0 /* SearchCommunicator.swift */; };
+		F49B04C221618C5B000849B0 /* FakeCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04C121618C5B000849B0 /* FakeCommunicator.swift */; };
 		F49B04C5216A9F43000849B0 /* SampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B04C4216A9F43000849B0 /* SampleError.swift */; };
 		F4BB6C9E214EE9CF00C16267 /* SearchQueryItemBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */; };
 		F4BB6CA0214EF09300C16267 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB6C9F214EF09300C16267 /* UrlBuilder.swift */; };
@@ -80,6 +82,8 @@
 		F49B04B021616240000849B0 /* CommunicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorTests.swift; sourceTree = "<group>"; };
 		F49B04B221616301000849B0 /* SearchCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCommunicator.swift; sourceTree = "<group>"; };
 		F49B04BA2161806E000849B0 /* NetworkTestingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkTestingConstants.swift; path = PetfinderSearchTests/NetworkTestingConstants.swift; sourceTree = SOURCE_ROOT; };
+		F49B04BE2161897D000849B0 /* NetworkFakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFakes.swift; sourceTree = "<group>"; };
+		F49B04C121618C5B000849B0 /* FakeCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCommunicator.swift; sourceTree = "<group>"; };
 		F49B04C4216A9F43000849B0 /* SampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleError.swift; sourceTree = "<group>"; };
 		F4BB6C9D214EE9CF00C16267 /* SearchQueryItemBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQueryItemBuilder.swift; sourceTree = "<group>"; };
 		F4BB6C9F214EF09300C16267 /* UrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				F49B04AC216151E1000849B0 /* AnimalBuilderTests.swift */,
 				F49B04B021616240000849B0 /* CommunicatorTests.swift */,
+				F49B04C321618C62000849B0 /* Doubles */,
 				F42EDB4C213362920093842D /* Info.plist */,
 				F42EDB7A21336DC20093842D /* SampleData */,
 				F4E57B4C2145C40C00B4D5B3 /* SearchServiceFactoryTests.swift */,
@@ -193,6 +198,15 @@
 				F49B04C4216A9F43000849B0 /* SampleError.swift */,
 			);
 			path = SampleData;
+			sourceTree = "<group>";
+		};
+		F49B04C321618C62000849B0 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				F49B04C121618C5B000849B0 /* FakeCommunicator.swift */,
+				F49B04BE2161897D000849B0 /* NetworkFakes.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +380,8 @@
 				F49B04AB21614E94000849B0 /* SampleExternalAnimalData.swift in Sources */,
 				F49B04C5216A9F43000849B0 /* SampleError.swift in Sources */,
 				F4BB6CA2214EF0C000C16267 /* UrlBuilderTests.swift in Sources */,
+				F49B04C221618C5B000849B0 /* FakeCommunicator.swift in Sources */,
+				F49B04BF2161897D000849B0 /* NetworkFakes.swift in Sources */,
 				F49B04AD216151E1000849B0 /* AnimalBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

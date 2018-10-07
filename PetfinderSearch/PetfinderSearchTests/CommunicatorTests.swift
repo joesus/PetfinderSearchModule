@@ -12,7 +12,7 @@ import XCTest
 
 class CommunicatorTests: XCTestCase {
 
-    let communicator = Communicator()
+    let communicator = SearchCommunicator()
     var fakeSession: FakeSession!
     let url = URL(string: "https://example.com")!
     var result: Result<Data>!
@@ -113,43 +113,4 @@ class CommunicatorTests: XCTestCase {
         XCTAssertEqual(result.value, sampleData,
                        "A successful task should pass the received data")
     }
-}
-
-class FakeDataTask: URLSessionDataTask {
-
-    let capturedUrlRequest: URLRequest
-    let completionHandler: (Data?, URLResponse?, Error?) -> Void
-
-    init(request: URLRequest, handler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        capturedUrlRequest = request
-        completionHandler = handler
-    }
-
-    var resumeWasCalled = false
-    override func resume() {
-        resumeWasCalled = true
-    }
-
-    var cancelWasCalled = false
-    override func cancel() {
-        cancelWasCalled = true
-    }
-
-}
-
-class FakeSession: URLSession {
-
-    var currentDataTask: URLSessionDataTask?
-
-    override func dataTask(
-        with request: URLRequest,
-        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
-        ) -> URLSessionDataTask {
-
-        let fakeDataTask = FakeDataTask(request: request, handler: completionHandler)
-        currentDataTask = fakeDataTask
-
-        return fakeDataTask
-    }
-
 }
