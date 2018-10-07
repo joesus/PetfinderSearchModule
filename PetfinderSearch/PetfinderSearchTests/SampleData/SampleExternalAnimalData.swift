@@ -36,27 +36,22 @@ enum SampleExternalAnimalData {
     }
 
     enum Cat {
-        static let valid: [String: Any] = [
-            "name": [
-                "$t": "CatOne"
-            ],
-            "animal": [
-                "$t": "cat"
-            ]
-        ]
-        static let anotherValid: [String: Any] = [
-            "name": [
-                "$t": "CatTwo"
-            ],
-            "animal": [
-                "$t": "cat"
-            ]
-        ]
         static let missingName: [String: Any] = [
             "animal": [
                 "$t": "cat"
             ]
         ]
+
+        static func validCat(usingIndex index: Int) -> [String: Any] {
+            return [
+                "name": [
+                    "$t": "Cat\(index)"
+                ],
+                "animal": [
+                    "$t": "cat"
+                ]
+            ]
+        }
     }
 
     enum Dog {

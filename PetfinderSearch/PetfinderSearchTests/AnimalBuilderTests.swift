@@ -72,8 +72,8 @@ class AnimalBuilderTests: XCTestCase {
     func testBuildingAnimalsFromMinimalAnimalData() {
         let response = SampleExternalAnimalData.wrap(
             animals: [
-                SampleExternalAnimalData.Cat.valid,
-                SampleExternalAnimalData.Cat.anotherValid
+                SampleExternalAnimalData.Cat.validCat(usingIndex: 0),
+                SampleExternalAnimalData.Cat.validCat(usingIndex: 1)
             ]
         )
         let animals = AnimalBuilder.buildAnimals(from: response)
@@ -85,12 +85,12 @@ class AnimalBuilderTests: XCTestCase {
                 return XCTFail("There should be two valid animals")
         }
 
-        XCTAssertEqual(animalOne.name, "CatOne",
+        XCTAssertEqual(animalOne.name, "Cat0",
                        "First animal name was set incorrectly")
         XCTAssertEqual(animalOne.species, .cat,
                        "First animal species was set incorrectly")
 
-        XCTAssertEqual(animalTwo.name, "CatTwo",
+        XCTAssertEqual(animalTwo.name, "Cat1",
                        "Second animal name was set incorrectly")
         XCTAssertEqual(animalTwo.species, .cat,
                        "Second animal species was set incorrectly")
