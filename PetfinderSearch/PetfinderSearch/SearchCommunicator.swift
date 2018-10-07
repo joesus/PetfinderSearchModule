@@ -1,5 +1,5 @@
 //
-//  Communicator.swift
+//  SearchCommunicator.swift
 //  PetfinderSearch
 //
 //  Created by Joe Susnick on 9/30/18.
@@ -9,15 +9,15 @@
 import AnimalData
 import AnimalSearchModule
 
-class Communicator {
+class SearchCommunicator {
 
     var session: URLSession = .shared
-    private weak var currentRetrievalTask: URLSessionDataTask?
+    private weak var currentTask: URLSessionDataTask?
 
     func findAnimals(at url: URL, completion: @escaping (Result<Data>) -> Void) {
-        currentRetrievalTask?.cancel()
+        currentTask?.cancel()
 
-        currentRetrievalTask = session.dataTask(with: url) {
+        currentTask = session.dataTask(with: url) {
             potentialData, potentialResponse, potentialError in
 
             guard potentialError == nil else {
@@ -34,6 +34,6 @@ class Communicator {
             return completion(.success(data))
         }
 
-        currentRetrievalTask?.resume()
+        currentTask?.resume()
     }
 }
