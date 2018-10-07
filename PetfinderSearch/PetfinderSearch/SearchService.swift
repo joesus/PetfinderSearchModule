@@ -11,11 +11,11 @@ import AnimalSearchModule
 
 public class SearchService: AnimalSearchModule.SearchService {
     var parameters: SearchParameters
-    var paginationCursor: PaginationCursor
+    var nextPaginationCursor: PaginationCursor
 
     init(parameters: SearchParameters, pageSize: Int) {
         self.parameters = parameters
-        paginationCursor = PaginationCursor(size: pageSize)
+        nextPaginationCursor = PaginationCursor(size: pageSize)
     }
 
     public func loadNextPage(completion: (Result<[Animal]>) -> Void) {
